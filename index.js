@@ -62,12 +62,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/fakeUser', async (req, res) => {
-    const user = new User({email: 'ster@gmail.com', username: 'ster111'})
-    const newUser = await User.register(user, 'testPass');
-    res.send(newUser);
-});
-
 //route handlers
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/reviews', reviewRoutes);
