@@ -99,11 +99,6 @@
 
 <script>
     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-    mapboxgl.accessToken = mapToken; //not important if public finds it, its already public..
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9, // starting zoom
-    });
+    const campground = <%- JSON.stringify(campground) %>
 </script>
+<script src="/javascripts/showMapPage.js"> </script>
